@@ -2,8 +2,8 @@ module "sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "aws-internal+testing-org-sb1@inductiveautomation.com"
-    AccountName               = "sandbox-aft-1"
+    AccountEmail              = "aws-internal+testing-org-sb2@inductiveautomation.com"
+    AccountName               = "sandbox-aft-2"
     ManagedOrganizationalUnit = "AFT"
     SSOUserEmail              = "rjacobo@inductiveautomation.com"
     SSOUserFirstName          = "Rick"
@@ -11,7 +11,11 @@ module "sandbox" {
   }
 
   account_tags = {
-    "Learn Tutorial" = "AFT"
+    "TechnicalContact" = "Rick Jacobo"
+    "AdministrativeContact" = "Rick Jacobo"
+    "Division" = "Cloud"
+    "Description" = "Sandbox 2"
+    "AccountName" = "Sandbox 2"
   }
 
   change_management_parameters = {
